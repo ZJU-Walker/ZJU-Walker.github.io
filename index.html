@@ -5,22 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ke Wang - Stanford University</title>
     <style>
-        /* 简单的 CSS 样式，保持页面整洁 */
-        body { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        h1 { margin-bottom: 5px; }
-        h2 { border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-top: 30px; }
+        /* 保持极简学术风格 */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 850px; /* 稍微调宽一点以适应内容 */
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        h1 { margin: 0 0 0.5rem 0; font-size: 2.2rem; }
+        h2 { border-bottom: 2px solid #f4f4f4; padding-bottom: 0.5rem; margin-top: 2.5rem; font-size: 1.5rem; color: #111; }
         a { color: #0066cc; text-decoration: none; }
         a:hover { text-decoration: underline; }
-        .header { display: flex; gap: 30px; align-items: flex-start; margin-bottom: 40px; }
-        .profile-pic { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; background-color: #eee; flex-shrink: 0; }
-        .intro p { margin-top: 5px; }
-        .links { margin-top: 15px; }
-        .links a { margin-right: 15px; font-weight: bold; }
-        .paper { margin-bottom: 20px; }
-        .paper-title { font-weight: bold; font-size: 1.1em; display: block; }
-        .authors { color: #555; }
-        .venue { font-style: italic; color: #666; }
-        .date { font-family: monospace; color: #888; margin-right: 8px; }
+        
+        /* Header Layout */
+        .header { display: flex; gap: 2.5rem; align-items: flex-start; margin-bottom: 2rem; }
+        .profile-pic { 
+            width: 180px; height: 180px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            background-color: #f0f0f0; 
+            flex-shrink: 0;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .bio-text p { margin-top: 0.8rem; }
+        .links { margin-top: 1.2rem; }
+        .links a { margin-right: 1.5rem; font-weight: 600; font-size: 1.05em; }
+        
+        /* Lists & Dates */
+        ul { padding-left: 1.2rem; margin-top: 0.5rem; }
+        li { margin-bottom: 0.4rem; }
+        .date { font-family: monospace; color: #666; font-size: 0.95em; margin-right: 0.5rem; }
+        
+        /* Publication Item */
+        .publication { margin-bottom: 1.8rem; display: flex; gap: 15px; }
+        .pub-content { flex-grow: 1; }
+        .pub-title { font-weight: 700; font-size: 1.1em; color: #000; display: block; margin-bottom: 0.2rem; }
+        .authors { color: #444; margin-bottom: 0.3rem; }
+        .venue { font-style: italic; color: #666; margin-bottom: 0.4rem; }
+        .tag { 
+            display: inline-block; background: #eee; color: #555; 
+            padding: 1px 6px; border-radius: 4px; font-size: 0.8em; margin-left: 8px; vertical-align: middle;
+        }
+        .resources a { margin-right: 1rem; font-size: 0.95em; font-weight: 500;}
+
     </style>
 </head>
 <body>
@@ -28,20 +59,24 @@
     <div class="header">
         <img src="personal_photo.jpg" alt="Ke Wang" class="profile-pic">
         
-        <div class="intro">
+        <div class="bio-text">
             <h1>Ke Wang</h1>
-            <p>M.S. Student in Mechanical Engineering<br>
-            <strong>Stanford University</strong></p>
-            
             <p>
-                I am interested in <strong>Robotics, Computer Vision, and Robot Learning</strong>. 
-                Currently, I am working on [Ego-Pi / Project Name] at [Lab Name].
+                I am a Master's student in Mechanical Engineering at <strong>Stanford University</strong>, expected to graduate in June 2026.
+            </p>
+            <p>
+                My research interests lie at the intersection of <strong>Robotics, Computer Vision, and Robot Learning</strong>. 
+                I am particularly interested in leveraging egocentric human data for dexterous manipulation and developing differentiable simulation environments for navigation.
+            </p>
+            <p>
+                Currently, I am fortunate to be advised by <a href="https://ai.stanford.edu/~cbfinn/">Prof. Chelsea Finn</a> at Stanford IRIS Lab and <a href="https://msl.stanford.edu/people/mac-schwager">Prof. Mac Schwager</a> at MSL. 
+                Previously, I worked with Prof. Koushil Sreenath at UC Berkeley.
             </p>
             
             <div class="links">
-                <a href="Ke_Wang_CV.pdf">CV</a>
-                <a href="mailto:your_email@stanford.edu">Email</a>
-                <a href="https://github.com/yourusername">GitHub</a>
+                <a href="assets/Ke_Wang_CV.pdf">CV</a> 
+                <a href="mailto:kewalk@stanford.edu">Email</a>
+                <a href="https://github.com/ZJU-Walker">GitHub</a>
                 <a href="https://scholar.google.com/">Google Scholar</a>
             </div>
         </div>
@@ -49,29 +84,91 @@
 
     <h2>News</h2>
     <ul>
-        <li><span class="date">[2025.11]</span> Submitted a paper to ICRA 2026.</li>
-        <li><span class="date">[2024.09]</span> Started my M.S. at Stanford University.</li>
+        <li><span class="date">[Nov 2025]</span> Submitted a paper to <strong>CVPR 2026</strong> on VLA fine-tuning (Ego-Pi).</li>
+        <li><span class="date">[Sep 2024]</span> Started my M.S. degree at <strong>Stanford University</strong>.</li>
+        <li><span class="date">[Jun 2024]</span> Graduated from <strong>Zhejiang University</strong> as an Outstanding Graduate (Top 3%).</li>
     </ul>
 
-    <h2>Publications & Projects</h2>
+    <h2>Selected Publications</h2>
     
-    <div class="paper">
-        <span class="paper-title">
-            <a href="https://arxiv.org/abs/xxxx">Project Title: Real-time Teleoperation with ROS2</a>
-        </span>
-        <div class="authors"><strong>Ke Wang</strong>, Advisor Name</div>
-        <div class="venue">Under Review / Pre-print, 2025</div>
-        <div>
-            <a href="path/to/pdf">[PDF]</a> 
-            <a href="https://github.com/yourusername/project">[Code]</a>
-            <a href="https://youtube.com/...">[Video]</a>
+    <div class="publication">
+        <div class="pub-content">
+            <span class="pub-title">
+                Ego-Pi: VLA Fine-Tuning for Ego-Centric Human and Robot Data
+                <span class="tag">Under Review</span>
+            </span>
+            <div class="authors">
+                J. W. Kim*, <strong>K. Wang*</strong>, Z. Fu, S. Chen, C. Zhao, J. Lai, and C. Finn
+            </div>
+            <div class="venue">
+                Submitted to IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026
+            </div>
+            <div class="resources">
+                <a href="#">[PDF]</a>
+                <a href="#">[Project Page]</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="publication">
+        <div class="pub-content">
+            <span class="pub-title">
+                Bionic lightweight design of limb leg units for hydraulic quadruped robots
+            </span>
+            <div class="authors">
+                H. Zong, J. Zhang... <strong>K. Wang</strong>... and B. Xu
+            </div>
+            <div class="venue">
+                Bio-design and Manufacturing, 2024
+            </div>
+            <div class="resources">
+                <a href="https://doi.org/10.1007/s42242-023-00256-0">[Link]</a>
+            </div>
+        </div>
+    </div>
+
+    <h2>Research Experience</h2>
+
+    <div class="publication">
+        <div class="pub-content">
+            <span class="pub-title">GRaD-Nav-Onboard: Vision-based Drone Navigation via Differentiable Radiance Fields</span>
+            <div class="venue">Research Assistant, Stanford University (Advisor: Prof. Mac Schwager) | Apr 2025 - Present</div>
+            <ul>
+                <li>Developed a vision-based camera motion prediction module using GRU + MLP with physics-informed loss (PINN).</li>
+                <li>Implemented a Dynamic GS-Splat simulation environment for training drone navigation policies with zero-shot transfer capabilities.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="publication">
+        <div class="pub-content">
+            <span class="pub-title">Safety Critical Control of Quadruped Robots</span>
+            <div class="venue">Research Intern, UC Berkeley (Advisor: Prof. Koushil Sreenath) | May 2023 - Sep 2023</div>
+            <ul>
+                <li>Incorporated Control Barrier Functions (CBF) within MPC to enable safe navigation in confined spaces.</li>
+                <li>Migrated OCS2 and ROS-Control framework to Unitree GO1 robot.</li>
+            </ul>
         </div>
     </div>
 
     <h2>Education</h2>
     <ul>
-        <li><strong>Stanford University</strong>, M.S. in Mechanical Engineering (2024 - Present)</li>
-        <li><strong>[Previous University]</strong>, B.S. in [Major] (Year - Year)</li>
+        <li>
+            <strong>Stanford University</strong>, M.S. in Mechanical Engineering <span class="date">(2024 - Present)</span>
+            <br><small style="color:#666">GPA: 3.95/4.0</small>
+        </li>
+        <li>
+            <strong>Zhejiang University</strong>, B.S. in Mechanical Engineering <span class="date">(2020 - 2024)</span>
+            <br><small style="color:#666">GPA: 3.95/4.0 (Top 3%), Chu Kochen Honors College</small>
+        </li>
+    </ul>
+
+    <h2>Selected Awards</h2>
+    <ul>
+        <li>Zhejiang Province Outstanding Graduate <span class="date">[2024]</span></li>
+        <li>Silver Medal, International Exhibition of Inventions Geneva <span class="date">[2023]</span></li>
+        <li>Zhejiang Provincial Government Scholarship (Top 0.1%) <span class="date">[2022]</span></li>
+        <li>1st Prize, The 13th National Collegiate Mathematics Competition <span class="date">[2021]</span></li>
     </ul>
 
 </body>
